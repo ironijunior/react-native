@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 
-import { Title, StatelessTitle } from './components'
+import { Title, StatelessTitle, ImageHeader } from './components'
 
 import { HeroList } from './components'
 
@@ -39,9 +39,9 @@ class App extends Component {
   render() {
     return (
       <Fragment>
-        <Title name="Heroes"/>
-        <StatelessTitle name="Heroes" />
-
+        <ImageHeader text="Welcome to React Heroes!" 
+          image="https://catracalivre.com.br/wp-content/uploads/2014/03/os_vingadores_2_-_reproducao.jpg" />
+        
         <br />
 
         <AddHeroForm onAddHero={this.addHero} />

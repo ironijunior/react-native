@@ -7,3 +7,5 @@ export { Hero } from './hero/hero.component'
 export { AddHeroForm } from './add-hero-form/add-hero-form.component'
 
 export { Box } from './box/box.component'
+
+export { ImageHeader } from './header/header.component'
