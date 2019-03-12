@@ -8,8 +8,8 @@ export class ImageHeader extends PureComponent {
         return (
             <div className="header">
                 <div className="image">
-                    <img src={this.props.image} 
-                        width="400px" height="100%"/>
+                    <img src={this.props.image}  alt={this.props.text}
+                        width="100%" height="100%"/>
                     <span className="image-text">{this.props.text}</span>
                 </div>
             </div>

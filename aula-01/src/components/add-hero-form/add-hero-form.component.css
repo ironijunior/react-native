@@ -1,0 +1,49 @@
+.form-addhero {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-field {
+    margin: 10px 28px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column
+}
+
+.item-form-span {
+    margin-bottom: 3px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    font-size: 14px;
+
+    color: #666666;
+}
+
+.item-form-input {
+    margin-top: 2px;
+    width: 100%;
+    height: 45px;
+
+    background: #FFFFFF;
+    border: 1px solid #D1D1D1;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+
+.item-form-button {
+    width: 100%;
+    height: 55px;
+
+    background: #FF6565;
+    border: 1px solid #FF6565;
+    box-sizing: border-box;
+    border-radius: 6px;
+}

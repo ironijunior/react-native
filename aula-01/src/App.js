@@ -47,8 +47,11 @@ class App extends Component {
         <AddHeroForm onAddHero={this.addHero} />
 
         <br />
-
-        <Box><HeroList heroes={this.state.heroes} /></Box>
+        
+        <Box>
+          <StatelessTitle text="Heroes" />
+          <HeroList heroes={this.state.heroes} />
+        </Box>
 
       </Fragment>
     )

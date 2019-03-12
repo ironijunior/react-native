@@ -3,3 +3,14 @@
     color: white;
     width: fit-content
 }
+
+.heroes-title {
+    width: 84px;
+    height: 31px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 26px;
+    color: #333333;
+}

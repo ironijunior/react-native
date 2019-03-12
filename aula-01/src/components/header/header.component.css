@@ -4,6 +4,7 @@
 }
 
 .image {
+    display: flex;
     position: relative;
     height: 260px;
 }
@@ -16,4 +17,5 @@
     font-size: 32px;
     font-weight: bold;
     margin: 0;
+    padding: 0px 28px;
 }
