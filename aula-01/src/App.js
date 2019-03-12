@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 
-import { Title, StatelessTitle, ImageHeader } from './components'
+import { StatelessTitle, ImageHeader } from './components'
 
 import { HeroList } from './components'
 
@@ -29,6 +29,17 @@ class App extends Component {
     this.setState({heroes: newheroes})
   }
 
+  removeHero = (index) => {
+    let newheroes = this.state.heroes
+    let hero = newheroes[index]
+    let deleting = window.confirm(`You're deleting the ${hero.name}. Are you sure?`)
+
+    if(deleting) {
+      newheroes.splice(index,1)
+      this.setState({heroes: newheroes})
+    }
+  }
+
   componentDidUpdate(prevProps, prevState) {
     console.log("PrevProps", prevProps)
     console.log("CurrProps", this.props)
@@ -50,7 +61,7 @@ class App extends Component {
         
         <Box>
           <StatelessTitle text="Heroes" />
-          <HeroList heroes={this.state.heroes} />
+          <HeroList onRemoveHero={this.removeHero} heroes={this.state.heroes} />
         </Box>
 
       </Fragment>

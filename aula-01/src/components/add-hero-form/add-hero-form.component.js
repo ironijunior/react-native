@@ -38,23 +38,27 @@ export class AddHeroForm extends Component {
             image: this.state.image
         }
         this.props.onAddHero(hero)
+        this.setState({
+            name: '',
+            image: ''
+        })
     }
 
     render() {
         return (
             <form className="form-addhero" onSubmit={this.handleSubmit}>
-                    <div className="form-field">
-                        <span className="item-form-span">Nome</span>
-                        <input className="item-form-input" type="text" value={this.state.name} onChange={this.onNameChange} />
-                    </div>
-                    
-                    <div className="form-field">
-                        <span className="item-form-span">Imagem</span>
-                        <input className="item-form-input" type="text" value={this.state.image} onChange={this.onImageChange} />
-                    </div>
-                    <div className="form-field">
-                        <button className="item-form-button">Register</button>
-                    </div>
+                <div className="form-field">
+                    <span className="item-form-span">Nome</span>
+                    <input className="item-form-input" type="text" value={this.state.name} onChange={this.onNameChange} />
+                </div>
+                
+                <div className="form-field">
+                    <span className="item-form-span">Imagem</span>
+                    <input className="item-form-input" type="text" value={this.state.image} onChange={this.onImageChange} />
+                </div>
+                <div className="form-field">
+                    <button className="item-form-button">Register</button>
+                </div>
             </form>
         )
     }

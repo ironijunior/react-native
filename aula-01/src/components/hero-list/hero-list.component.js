@@ -9,7 +9,7 @@ export class HeroList extends Component {
             <Fragment>
                 {
                     this.props.heroes.map((hero, key) => (
-                        <Hero key={key} image={hero.image} name={hero.name} />
+                        <Hero chave={key} onRemoveHero={this.props.onRemoveHero} key={key} image={hero.image} name={hero.name} />
                     ))
                 }
             </Fragment>
