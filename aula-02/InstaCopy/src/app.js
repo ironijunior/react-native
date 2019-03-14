@@ -49,8 +49,7 @@ class App extends Component {
   )
 
   render() {
-    return (
-      
+    return (      
         
         <View style={{alignItems: 'center', flex: 1}}>
           
