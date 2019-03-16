@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Platform, Dimensions, View, ScrollView, Text, TextInput, StyleSheet, Image } from "react-native";
 
-import api from "./api/feed.json";
+import api from "./api/direct.json";
 
 const dime = Dimensions.get('window');
 
@@ -18,9 +18,24 @@ class App extends Component {
     <View key={key} style={styles.viewDirect}>
       
       <View style={styles.headerPost}>
-        <Image
-          style={styles.fotoPerfil}
-          source={{uri: post.perfil}}/>
+
+
+        <View style={{width: 80, height: 80, margin: 10}}>
+          {
+            post.perfil.length > 1 
+                ?
+                <View style={{width: 80, height: 80, position: 'relative', flexDirection: 'row'}}><Image
+                  style={{width: 60, height: 60, borderRadius: 50}}
+                  source={{uri: post.perfil[0]}}/>
+                <Image
+                  style={{width: 60, height: 60, borderRadius: 50, position: 'absolute', right: 0, bottom: 0}}
+                  source={{uri: post.perfil[1]}}/></View>
+                :
+                <Image
+                  style={{width: 80, height: 80, borderRadius: 50}}
+                  source={{uri: post.perfil[0]}}/>
+          }
+        </View>
         
         <View style={{justifyContent: 'center', flex: 2}}>
           <Text style={{fontSize: 18, fontWeight: 'bold'}}>{post.autor}</Text>
@@ -64,7 +79,7 @@ class App extends Component {
             <View style={{flex: 1, height: 40, alignItems: 'center'}}>
               <Image 
                 style={{flex: 1, width: 30, height: 30, resizeMode: 'contain'}}
-                source={require('./img/send.png')}
+                source={require('./img/plus.png')}
               />
             </View>
 
@@ -75,9 +90,10 @@ class App extends Component {
             contentContainerStyle={Platform.OS === 'ios' ? 20 : 0}>
 
             <View style={{flexDirection: 'row'}}>
-              <TextInput style={{flex: 1, backgroundColor: '#FAFAFA', borderRadius: 15, margin: 7}}
+              <TextInput style={{flex: 1, fontSize: 16, backgroundColor: '#e8eaed', borderRadius: 15, margin: 10}}
                 inlineImageLeft='search'
                 value={this.state.text}
+                onChangeText={(text) => this.setState({text})}
               />
             </View>          
           
@@ -95,14 +111,14 @@ class App extends Component {
 
               <View style={{flex: 1, alignItems: 'flex-end'}}>
                 <Image 
-                  style={{width: 40, height: 40, resizeMode: 'contain', marginRight: 8}}
+                  style={{width: 35, height: 35, resizeMode: 'contain', marginRight: 8}}
                   source={require('./img/camera.png')}
                 />
               </View>
 
               <View style={{flex: 1}}>
                 <Text 
-                  style={{fontSize: 20}}>
+                  style={{color: '#3a8aec', fontSize: 20}}>
                   Camera
                 </Text>
               </View>
