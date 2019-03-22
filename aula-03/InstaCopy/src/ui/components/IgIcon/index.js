@@ -1,0 +1,1 @@
+export { IgIcon } from './ig-icon.component'

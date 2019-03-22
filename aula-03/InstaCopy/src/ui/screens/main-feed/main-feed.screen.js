@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { AppRegistry, Platform, Dimensions, View, ScrollView, Text, StyleSheet, Image } from "react-native";
 
-import { IgIcon } from '../../components/IgIcon/ig-icon.component'
+import { IgIcon } from '@ui/components/IgIcon/'
 
-import api from "../../api/feed.json";
+import api from "@api/feed.json";
 
 import styles from './main-feed.stylesheet'
 
