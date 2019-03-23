@@ -1,13 +1,26 @@
 {
+    "presets": [
+        "module:metro-react-native-babel-preset"
+    ],
     "plugins": [
-        ["module-resolver", {
-            "root": ["./src"],
-            "alias": {
-                "@ui": "./src/ui",
-                "@assets": "./src/assets",
-                "@api": "./src/api",
-                "@img": "./src/img"
+        "@babel/transform-react-jsx-source",
+        [
+            "module-resolver",
+            {
+                "extensions": [
+                    ".js",
+                    ".ios.js",
+                    ".android.js",
+                    ".tsx",
+                    ".ts"
+                ],
+                "alias": {
+                    "@ui": "./src/ui",
+                    "@assets": "./src/assets",
+                    "@api": "./src/api",
+                    "@img": "./src/img"
+                }
             }
-        }]
+        ]
     ]
 }

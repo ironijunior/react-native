@@ -1,0 +1,1 @@
+export { TabBarScreen } from './tabbar.screen'

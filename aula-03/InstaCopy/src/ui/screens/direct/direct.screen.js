@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import { Platform, View, ScrollView, Text, TextInput, Image } from "react-native";
 
-import { IgIcon } from '../../components/IgIcon/ig-icon.component'
+import { IgIcon } from '@ui/components/IgIcon'
 
-import api from "../../api/direct.json";
+import api from "@api/direct.json";
 
 import styles from './direct.stylesheet'
 
-export class Direct extends Component {
+import { BaseScreen } from '@ui/screens/base'
+
+export class DirectScreen extends BaseScreen {
 
   constructor(props) {
     super(props);
@@ -66,7 +68,7 @@ export class Direct extends Component {
     </View>
   )
 
-  render() {
+  renderContent() {
     return (      
         
         <View style={{alignItems: 'center', flex: 1}}>

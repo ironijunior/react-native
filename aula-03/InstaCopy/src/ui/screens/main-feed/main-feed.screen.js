@@ -85,40 +85,6 @@ export class MainFeed extends Component {
           </ScrollView>
 
 
-          <View style={{flexDirection: 'row'}}>
-            
-            <View style={{flex: 1, height: 50, justifyContent: 'center', alignItems: 'center'}}>
-              <IgIcon name="home" 
-                style={{fontSize: 25, color: 'black'}}
-              />
-            </View>
-
-            <View style={{flex: 1, height: 50, justifyContent: 'center', alignItems: 'center'}}>
-              <IgIcon name="search" 
-                style={{fontSize: 25 , color: 'black'}}
-              />
-            </View>
-
-            <View style={{flex: 1, height: 50, justifyContent: 'center', alignItems: 'center'}}>
-              <IgIcon name="add-square" 
-                style={{fontSize: 25, color: 'black'}}
-              />
-            </View>
-
-            <View style={{flex: 1, height: 50, justifyContent: 'center', alignItems: 'center'}}>
-              <IgIcon name="heart-empty" 
-                style={{fontSize: 25 , color: 'black'}}
-              />
-            </View>
-
-            <View style={{flex: 1, height: 50, justifyContent: 'center', alignItems: 'center'}}>
-              <IgIcon name="user" 
-                style={{fontSize: 25, color: 'black'}}
-              />
-            </View>
-            
-          </View>
-
         </View>
         
         
