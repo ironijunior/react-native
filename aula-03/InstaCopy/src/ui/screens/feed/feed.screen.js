@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Platform, Dimensions, View, ScrollView, Text, StyleSheet, Image } from "react-native";
+import { Platform, StatusBar, View, ScrollView, Text, StyleSheet, Image } from "react-native";
 
 import { IgIcon } from '@ui/components/IgIcon/'
 
@@ -10,6 +10,10 @@ import styles from './feed.style'
 import { BaseScreen } from '@ui/screens/base'
 
 export class FeedScreen extends BaseScreen {
+
+  screenWillFocus() {
+    StatusBar.setTranslucent(true)
+  }
 
   renderPost = (post, key) => (
     <View key={key}>
@@ -54,38 +58,16 @@ export class FeedScreen extends BaseScreen {
 
   renderContent() {
     return (
-      <View style={{ alignItems: 'center', flex: 1}}>
 
-        <View style={{ flexDirection: 'row', marginTop: 10, marginBottom: 10 }}>
+      <ScrollView
+        style={styles.container}
+        contentContainerStyle={Platform.OS === 'ios' ? 20 : 0}>
 
-          <View style={{ flex: 1, height: 50, justifyContent: 'center', alignItems: 'center' }}>
-            <IgIcon name="photo-camera-empty" style={{ color: 'black', fontSize: 35 }} />
-          </View>
+        {
+          api.feed.map(this.renderPost)
+        }
 
-          <View style={{ flex: 4, height: 50, justifyContent: 'center', alignItems: 'center' }}>
-            <IgIcon
-              style={{ fontSize: 40, color: 'black' }}
-              name='instagram_lg_black'
-            />
-          </View>
-
-          <View style={{ flex: 1, height: 50, justifyContent: 'center', alignItems: 'center' }}>
-            <IgIcon name="paper-plane" style={{ color: 'black', fontSize: 35 }} />
-          </View>
-
-        </View>
-
-        <ScrollView
-          style={styles.container}
-          contentContainerStyle={Platform.OS === 'ios' ? 20 : 0}>
-
-          {
-            api.feed.map(this.renderPost)
-          }
-
-        </ScrollView>
-
-      </View>
+      </ScrollView>
 
     );
   }
