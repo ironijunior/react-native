@@ -9,10 +9,32 @@ import styles from './feed.style'
 
 import { BaseScreen } from '@ui/screens/base'
 
+import { StorageService } from '@service/storage'
+
+import { StorySection } from './section/stories'
+
 export class FeedScreen extends BaseScreen {
+
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      posts: api.feed
+    }
+  }
 
   screenWillFocus() {
     StatusBar.setTranslucent(true)
+
+    StorageService.getObject('photo-camera').then(resp => {
+      if(!!resp) {
+        this.setState({
+          posts: [...this.state.posts, { imagem: resp } ]
+        })
+      }
+    })
+
+    StorageService.remove('photo-camera')
   }
 
   renderPost = (post, key) => (
@@ -63,8 +85,11 @@ export class FeedScreen extends BaseScreen {
         style={styles.container}
         contentContainerStyle={Platform.OS === 'ios' ? 20 : 0}>
 
+        <StorySection />
+
+
         {
-          api.feed.map(this.renderPost)
+          this.state.posts.map(this.renderPost)
         }
 
       </ScrollView>
