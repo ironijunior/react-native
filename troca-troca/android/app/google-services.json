@@ -1,0 +1,35 @@
+{
+  "project_info": {
+    "project_number": "364318121578",
+    "firebase_url": "https://troca-troca-cfe5f.firebaseio.com",
+    "project_id": "troca-troca-cfe5f",
+    "storage_bucket": "troca-troca-cfe5f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:364318121578:android:4c9c92909b42eecb",
+        "android_client_info": {
+          "package_name": "com.trocatroca"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTwH4ZHbiwLnQiuDmX0jV6lqu7gu76lWI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "364318121578-nld63foeqqr4s1nqoibaluh8mig71iiv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

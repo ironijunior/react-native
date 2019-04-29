@@ -1,0 +1,1 @@
+export { CoIcon } from './co-icon.component'

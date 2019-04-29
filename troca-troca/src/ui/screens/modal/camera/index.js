@@ -1,0 +1,1 @@
+export { CameraModal } from './camera.modal'

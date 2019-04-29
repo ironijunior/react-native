@@ -1,0 +1,7 @@
+export { BaseService } from './base/base.service'
+export { LoginService } from './login/login.service'
+export { StorageService } from './storage/storage.service'
+export { PostService } from './post/post.service'
+export { UserService } from './user/user.service'
+export { MessageService } from './message/message.service'
+export { CategoriaService } from './categoria/categoria.service'

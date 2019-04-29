@@ -1,0 +1,1 @@
+export { CoCamera } from './co-camera.component'

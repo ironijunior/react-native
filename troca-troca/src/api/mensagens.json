@@ -1,0 +1,34 @@
+[
+    {
+        "anuncioId": "1",
+        "usuarioInteressadoId": "5",
+        "mensagens": [{
+            "id": "xyz",
+            "text": "Oi!",
+            "recebido": true
+        },{
+            "id": "91298",
+            "text": "Olá!",
+            "recebido": false
+        },{
+            "mensagemId": "7615",
+            "text": "Aceita bicicleta?",
+            "recebido": true
+        }]
+    },
+    {
+        "anuncioId": "1",
+        "usuarioInteressadoId": "20",
+        "mensagens": [{
+            "mensagemId": "uias",
+            "text": "Oi!"
+        },{
+            "mensagemId": "apoo",
+            "text": "haas"
+        },{
+            "mensagemId": "8919",
+            "text": "Tcha!"
+        }]
+    }
+
+]
